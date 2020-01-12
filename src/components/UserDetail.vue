@@ -1,7 +1,9 @@
 <template>
     <div class="component">
         <h3>You may view the User Details here</h3>
-        <p>Many Details {{ switchName() }}</p>
+        <p>Many Details</p>
+        <p>User Name: {{ switchName() }}</p>
+        <button @click="resetName">Reset Name</button>
     </div>
 </template>
 
@@ -10,7 +12,7 @@
         props: {
         // Validating string for "props"
             myName: {
-                type: String
+                type: String,
                 default: 'Max'
             },
 
