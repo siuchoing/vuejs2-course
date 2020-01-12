@@ -15,8 +15,9 @@
         methods: {
             editAge () {
                 this.userAge = 30;
-                //this.$emit('ageWasEdited', this.userAge);
-                eventBus.$emit('ageWasEdited', this.userAge);
+                //this.$emit('ageWasEdited', this.userAge);      // passing data (age) between all parent components [child to parent]
+                //eventBus.$emit('ageWasEdited', this.userAge);  // passing data (age) between UserEdit and UserDetail [child to child]
+                eventBus.changeAge(this.userAge);                // passing data (age) centrally between all child components [child to child]
             }
         }
     }
