@@ -14,7 +14,7 @@
 </template>
 
 <script>
-    import User from './components/User.vue';
+    import User from './components/User/User.vue';
     import Header from './components/Shared/Header.vue';
     import Footer from './components/Shared/Footer.vue';
     import Servers from './components/Server/Servers.vue';
