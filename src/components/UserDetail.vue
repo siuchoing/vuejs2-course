@@ -10,6 +10,8 @@
 </template>
 
 <script>
+    import { eventBus } from '../main';
+
     export default {
         // Passing data from parent to child
         props: {
@@ -48,6 +50,12 @@
                 this.myName = 'Max';
                 this.$emit('nameWasReset', this.myName);
             }
+        },
+        created() {
+            // passing data from UserEdit component
+            eventBus.$on('ageWasEdited', (age) => {
+                this.userAge = age;
+            });
         }
     }
 </script>
