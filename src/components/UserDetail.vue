@@ -7,7 +7,31 @@
 
 <script>
     export default {
-        props: ['myName'],
+        props: {
+        // Validating string for "props"
+            myName: {
+                type: String
+                default: 'Max'
+            },
+
+        // Validating object for "props"
+            // myName: {
+            //     type: Object,
+            //     default() {
+            //         return {
+            //             name: 'Max'
+            //         }
+            //     }
+            // },
+
+        // Multiple types
+            // myName: {
+            //     type: [String, Array],
+            //     required: true // to make sure this is a property which always is a string with passing props.
+            //     // it will overwritten by default, so either default or required
+            // },
+
+        },
         methods: {
             switchName() {
                 return this.myName.split("").reverse().join("");
