@@ -41,6 +41,7 @@
             resetName() {
                 // only changed it in the child component, so myName="Anna" in the parent component
                 this.myName = 'Max';
+                this.$emit('nameWasReset', this.myName);
             }
         }
     }
