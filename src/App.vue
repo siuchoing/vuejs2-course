@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+        <user></user>
+        <hr>
         <app-header></app-header>
         <hr>
         <div class="row">
@@ -12,6 +14,7 @@
 </template>
 
 <script>
+    import User from './components/User.vue';
     import Header from './components/Shared/Header.vue';
     import Footer from './components/Shared/Footer.vue';
     import Servers from './components/Server/Servers.vue';
@@ -22,7 +25,8 @@
             appHeader: Header,
             Servers: Servers,
             'app-server-details': ServerDetails,
-            'app-footer': Footer
+            'app-footer': Footer,
+            'user': User
         }
     }
 </script>
