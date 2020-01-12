@@ -3,6 +3,7 @@
         <h3>You may view the User Details here</h3>
         <p>Many Details</p>
         <p>User Name: {{ switchName() }}</p>
+        <p>User Age: {{ userAge }}</p>
         <button @click="resetName">Reset Name by $emit</button>
         <button @click="resetFn()">Reset Name by callback</button>
     </div>
@@ -18,6 +19,7 @@
                 default: 'Max'
             },
             resetFn: Function,
+            userAge: Number
 
         // Validating object for "props"
             // myName: {
