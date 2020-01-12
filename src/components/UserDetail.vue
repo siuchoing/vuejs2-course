@@ -37,6 +37,10 @@
         methods: {
             switchName() {
                 return this.myName.split("").reverse().join("");
+            },
+            resetName() {
+                // only changed it in the child component, so myName="Anna" in the parent component
+                this.myName = 'Max';
             }
         }
     }
