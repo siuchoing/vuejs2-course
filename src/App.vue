@@ -1,15 +1,20 @@
 <template>
     <div class="container">
-        <user></user>
+        <session title="server">
+            <app-header></app-header>
+            <hr>
+            <div class="row">
+                <servers></servers>
+                <app-server-details></app-server-details>
+            </div>
+            <hr>
+            <app-footer></app-footer>
+        </session>
         <hr>
-        <app-header></app-header>
-        <hr>
-        <div class="row">
-            <servers></servers>
-            <app-server-details></app-server-details>
-        </div>
-        <hr>
-        <app-footer></app-footer>
+        <session title="user">
+            <user></user>
+        </session>
+
     </div>
 </template>
 
