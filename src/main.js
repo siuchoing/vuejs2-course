@@ -9,6 +9,8 @@ export const eventBus = new Vue({
   }
 });
 
+export const serverBus = new Vue();
+
 new Vue({
   el: '#app',
   render: h => h(App)
